@@ -55,3 +55,28 @@ displayEmployeeShifts(employees, "Sara");
 displayEmployeeShifts(employees, "David");
 displayEmployeeShifts(employees, "Emily");
 displayEmployeeShifts(employees, "Jessie");
+
+//Task Three
+
+console.log("Task Three"); //added for better console readability
+
+   function assignShift(employeeName, day, hours){
+        for(let employee of employees){
+            if(employee.name === employeeName){
+                const currentShift = employee.shifts.find (shift => shift.day ===day);
+                if (currentShift){
+                    console.log(`${employeeName} Already scheduled for ${day}`);
+                    return; }
+                    employee.shifts.push({day,hours});
+                        console.log(`${employeeName} Schdule update for ${day} ${hours} hrs`);
+                            return;
+             }};
+        }
+
+        //testing the function
+assignShift("John", "Saturday", 8);
+assignShift("Sara", "Saturday", 8);
+assignShift("David", "Saturday", 8);
+assignShift("Emily", "Saturday", 8);
+assignShift("Jessie", "Saturday", 8);
+console.log("Weekly Schedule:", employees);
