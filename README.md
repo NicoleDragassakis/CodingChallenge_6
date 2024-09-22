@@ -1,1 +1,2 @@
 # CodingChallenge_6
+This project creates a system which tracks employees shifts and checks aviavibilty based off their existing shifts and assigns shifts to employees then calculate the total hours each employee works.
