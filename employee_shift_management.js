@@ -105,3 +105,24 @@ console.log(`Total hours for Emily: ${totalHoursEmily}`);//outputs 16
 
 let totalHoursJessie = calculateTotalHours("Jessie");
 console.log(`Total hours for Jessie: ${totalHoursJessie}`);//outputs 18
+
+//Task Five
+
+console.log("Task Five"); //for better console readability
+
+function listAvailableEmployees(day){
+    const availableStaff =employees.filter(employee =>
+        !employee.shifts.some(shift => shift.day === day) //determines if they are working or not based off the day
+    );
+    console.log(`Available Staff for ${day}:`);
+    availableStaff.forEach(employee => console.log(employee.name));
+}
+
+//testing
+listAvailableEmployees("Sunday");
+listAvailableEmployees("Monday");
+listAvailableEmployees("Tuesday");
+listAvailableEmployees("Wednesday");
+listAvailableEmployees("Thursday");
+listAvailableEmployees("Friday");
+listAvailableEmployees("Saturday");
